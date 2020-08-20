@@ -1,5 +1,8 @@
 import React from 'react'
-import Slider from '../../components/Slider/Slider'
+import AppaPage from '../CalcPage/appaPage'
+import CarsPage from '../CalcPage/carsPage'
+import RealEstatePage from '../CalcPage/realEstatePage'
+import SalaryPage from '../CalcPage/salaryPage'
 
 
 const HomePage = () => {
@@ -48,6 +51,14 @@ const HomePage = () => {
             <div className="container-fluid flex-calc">
                 <button type="button" className="btn calc-btn all-calc">Տեսնել բոլոր հաշվիչները</button>
             </div>
+            <SalaryPage />
+            <hr />
+            <CarsPage />
+            <hr />
+            <AppaPage />
+            <hr />
+            <RealEstatePage />
+
         </>
     )
 }
