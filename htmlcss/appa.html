@@ -147,7 +147,7 @@
 	</div>
 </header>
 
-<div class="appa">
+<!-- <div class="appa">
 	<label class="appa-label">Տրանսպորտային միջոցի տեսակ</label><br>
 	<select class="appa-select">
 		<option value="">Ընտրել</option>
@@ -204,6 +204,142 @@
 	
 	<br><br>
 	<button type="button" class="btn calc-btn">Հաշվել</button>
+</div> -->
+
+<div class="parent">
+	<div class="left">
+		
+		<ul class="list-unstyled components">
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+	</div>
+	<div class="right">
+		<div class="top">
+			<div class="top-text"><h3>Info About APPA</h3></div>
+			<div class="top-input">
+				<div class="appa">
+                <div class="parent-select">
+                	<div>
+		                <label class="appa-label">Տրանսպորտային միջոցի տեսակ</label>
+		                <br />
+		                <select class="appa-select">
+		                    <option value="">Ընտրել</option>
+		                    <option value="1">Թեթև մարդատար </option>
+		                    <option value="2">Բեռնատար (ներառյալ ուղևորաբեռնատար)</option>
+		                    <option value="3">Ավտոբուս (ներառյալ միկրոավտոբուս), տրոյլեբուս</option>
+		                    <option value="4">Մոտոտրանսպորտ (ներառյալ մոտոցիկլ, տրիցիկլ, քվադրիցիկլ)</option>
+		                    <option value="5">Այլ</option>
+		                </select>
+		            </div>
+		            <div>
+		                <label class="appa-label-count">Նստատեղերի քանակ</label>
+		                <br />
+		                <select class="appa-select-count">
+		                    <option value="">Ընտրել</option>
+		                    <option value="1">Մինչև 17 (առանց վարորդի)</option>
+		                    <option value="2">18 և ավել (առանց վարորդի)</option>
+		                </select>
+		            </div>
+	            </div>
+                <br />
+                <div class="parent-select">
+                	<div>
+		                <label class="appa-label-power">ՏՄ շարժիչի հզորությունը</label>
+		                <br />
+		                <select class="appa-select-power">
+		                    <option value="">Ընտրել</option>
+		                    <option value="1">Մինչև 80 ձիաուժ</option>
+		                    <option value="2">81-ից 140 ձիաուժ</option>
+		                    <option value="3">141-ից 230 ձիաուժ</option>
+		                    <option value="4">231 և ավելի ձիաուժ</option>
+		                </select>
+            		</div>
+            		<div>
+		                <label class="appa-label-type">Օգտագործման նպատակ</label>
+		                <br />
+		                <select class="appa-select-type">
+		                    <option value="">Ընտրել</option>
+		                    <option value="1">Անձնական</option>
+		                    <option value="2">Հանրային տրանսպորտ</option>
+		                    <option value="3">Տաքսի/վարձակալություն</option>
+		                    <option value="4">Ծառայողական/առևտրային</option>
+		                </select>
+		            </div>
+		        </div>
+                <br />
+                <label class="appa-label-date">Ժամկետ</label>
+                <br />
+                <select class="appa-select-date">
+                    <option value="">Ընտրել</option>
+                    <option value="1">1 տարի</option>
+                    <option value="2">11 ամիս</option>
+                    <option value="3">10 ամիս</option>
+                    <option value="4">9 ամիս</option>
+                    <option value="5">8 ամիս</option>
+                    <option value="6">7 ամիս</option>
+                    <option value="7">6 ամիս</option>
+                    <option value="8">5 ամիս</option>
+                    <option value="9">4 ամիս</option>
+                    <option value="10">3 ամիս</option>
+                    <option value="11">2 ամիս*</option>
+                    <option value="12">15 օրից մինչև 1 ամիս ներառյալ*</option>
+                    <option value="13">10 օրից մինչև 15 օր ներառյալ*</option>
+                    <option value="14">10 օր*</option>
+                </select>
+                <br />
+                <br />
+                <center><button type="button" class="btn calc-btn">Հաշվել</button></center>
+            </div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="bottom-div">
+				<div class="top-text"><h3>Result</h3></div>
+				<center><div class="bottom-input">		
+					<input type="text" name="" /><br />
+					<input type="text" name="" /><br />
+					<input type="text" name="" /><br />
+				</div></center>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer>

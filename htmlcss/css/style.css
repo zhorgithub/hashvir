@@ -1,4 +1,3 @@
-
 .bg-white {
     background-color: #fff
 }
@@ -199,4 +198,64 @@ a {
 .footer-calc{
 	background: #3F3AD212 0% 0% no-repeat padding-box;
 	opacity: 1;
+}
+.parent{
+    display: flex;
+    justify-content: space-around;
+}
+.left{
+    width: 25%;
+/*    border:1px solid red;
+    height: 100vh;*/
+}
+.right{
+    width: 65%;
+}
+.top{
+    /*height: 200px;*/
+    /*border:1px solid black;*/
+    background: #a99b94;
+    padding: 25px;
+}
+.bottom{
+    margin-top: 20px;
+    background: #a99b94;
+}
+.list-unstyled.components li{
+    border:1px solid #2d2929;
+    background: #FF7B24;
+    text-align: center;
+    color: #000;
+    padding: 15px;
+}
+.list-unstyled.components li a:hover{
+    text-decoration: none;
+}
+#homeSubmenu li,#pageSubmenu li{
+    border:none;
+    border-bottom: 1px solid #8a512b;
+    background: #FF7B24;
+    text-align: center;
+    color: #2d2929;
+}
+.dropdown-toggle::after{
+    position: relative;
+    left: 37%;
+}
+.parent-select{
+    display: flex;
+    justify-content: space-between;
+}
+.parent-select div{
+    width: 50%;
+}
+.parent-select div select{
+    width: 90%;
+}
+.top-text h3{
+    text-align: center;
+    padding: 15px;
+}
+.bottom-input input{
+    margin: 10px;
 }
