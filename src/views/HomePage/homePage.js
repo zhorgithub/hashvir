@@ -1,8 +1,9 @@
 import React from 'react'
-import AppaPage from '../CalcPage/appaPage'
-import CarsPage from '../CalcPage/carsPage'
-import RealEstatePage from '../CalcPage/realEstatePage'
-import SalaryPage from '../CalcPage/salaryPage'
+import AppaPage from '../CalcPage/AppaPage'
+import CarsPage from '../CalcPage/CarsPage'
+import RealEstatePage from '../CalcPage/RealEstatePage'
+import SalaryPage from '../CalcPage/SalaryPage'
+import { Link } from 'react-router-dom'
 
 
 const HomePage = () => {
@@ -18,19 +19,19 @@ const HomePage = () => {
                         <div className="col col1">
                             <div className="icon-part-parent">
                                 <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
-                                <p className="calc-icon-text">Աշխատավարձի հաշվիչ</p>
+                                <p className="calc-icon-text"><Link to='/salary'>Աշխատավարձի հաշվիչ</Link></p>
                             </div>
                         </div>
                         <div className="col col2">
                             <div className="icon-part-parent">
                                 <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
-                                <p className="calc-icon-text">Գույքահարկի հաշվիչ</p>
+                                <p className="calc-icon-text"><Link to='realEstate'>Գույքահարկի հաշվիչ</Link></p>
                             </div>
                         </div>
                         <div className="col col3">
                             <div className="icon-part-parent">
                                 <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
-                                <p className="calc-icon-text">ԱՊՊԱ</p>
+                                <p className="calc-icon-text"><Link to='appa'>ԱՊՊԱ</Link></p>
                             </div>
                         </div>
                         <div className="col col4">
@@ -51,6 +52,8 @@ const HomePage = () => {
             <div className="container-fluid flex-calc">
                 <button type="button" className="btn calc-btn all-calc">Տեսնել բոլոր հաշվիչները</button>
             </div>
+
+
             <SalaryPage />
             <hr />
             <CarsPage />
