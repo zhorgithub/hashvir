@@ -231,7 +231,7 @@ a {
 .list-unstyled.components li a:hover{
     text-decoration: none;
 }
-#homeSubmenu li,#pageSubmenu li{
+#homeSubmenu li,#pageSubmenu li, #avandSubmenu li{
     border:none;
     border-bottom: 1px solid #8a512b;
     background: #FF7B24;
