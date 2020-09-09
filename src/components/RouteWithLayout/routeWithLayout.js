@@ -25,5 +25,4 @@ RouteWithLayout.propTypes = {
     path: PropTypes.string
 };
 
-
 export default RouteWithLayout;

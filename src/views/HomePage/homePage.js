@@ -53,7 +53,6 @@ const HomePage = () => {
                 <button type="button" className="btn calc-btn all-calc">Տեսնել բոլոր հաշվիչները</button>
             </div>
 
-
             <SalaryPage />
             <hr />
             <CarsPage />

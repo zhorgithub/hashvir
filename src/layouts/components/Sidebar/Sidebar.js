@@ -46,7 +46,6 @@ function Sidebar(props) {
                 <a href="#">Contact</a>
             </li>
         </ul>
-
     )
 
 }

@@ -2,6 +2,7 @@ import React from 'react'
 
 const Header = () => {
 
+
     return (
         <div className="container-fluid px-0">
             <nav className="navbar navbar-expand-md navbar-light bg-white p-0"> <a className="navbar-brand mr-4" href="#"><strong>Logo</strong></a> <button className="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>

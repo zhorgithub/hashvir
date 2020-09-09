@@ -7,7 +7,6 @@ import Sidebar from '../components/Sidebar/Sidebar'
 function CalculationLayout(props) {
     const { children } = props;
 
-    console.log('layout')
     return (
         <>
             <Header />

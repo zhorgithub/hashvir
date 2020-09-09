@@ -10,7 +10,6 @@ const CarsPage = () => {
         let myTax;
         let percent = 100;
 
-
         const type = parseInt(e.target.elements[0].value);
         const year = parseInt(e.target.elements[1].value)
         const hp = parseInt(e.target.elements[2].value);

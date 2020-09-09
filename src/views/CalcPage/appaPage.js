@@ -93,7 +93,6 @@ const AppaPage = () => {
                     </div></center>
                 </div>
             </div>
-
         </>
     )
 }

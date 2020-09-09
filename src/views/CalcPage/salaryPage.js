@@ -22,7 +22,6 @@ const SalaryPage = () => {
         const ekamt = salary * e.target.elements[3].value / 100
         setEkamtayin(ekamt)
         setFinalSalary(salary - kut - ekamt - 1000)
-
     }
 
 

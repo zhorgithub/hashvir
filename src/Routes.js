@@ -44,9 +44,7 @@ function Routes() {
                 layout={CalculationLayout}
                 path='/realEstate'
             />
-
             <Redirect to='/' />
-
 
         </Switch>
     )

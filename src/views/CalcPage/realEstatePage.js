@@ -3,7 +3,7 @@ import React from 'react'
 
 const RealEstatePage = () => {
 
-    console.log('ssss');
+
     return (
         <>
             <div className="realestate">
