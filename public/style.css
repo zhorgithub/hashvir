@@ -197,11 +197,12 @@ a {
 }
 .footer-calc{
 	background: #3F3AD212 0% 0% no-repeat padding-box;
-	opacity: 1;
+    opacity: 1;
 }
 .parent{
     display: flex;
     justify-content: space-around;
+    min-height: 88vh;
 }
 .left{
     width: 25%;

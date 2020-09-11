@@ -19,7 +19,7 @@ function Sidebar(props) {
                 <Link to='appa'>Ապպա</Link>
             </li>
             <li>
-                <a href="#">Տեխզննում</a>
+                <Link to='inspection'>Տեխզննում</Link>
             </li>
             <li className="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Վարկ</a>
@@ -50,22 +50,22 @@ function Sidebar(props) {
                 </ul>
             </li> 
             <li>
-                <a href="#">Փոխարժեք</a>
+                <Link to='exchange'>Փոխարժեք</Link>
             </li>
             <li>
-                <a href="#">Մայրության նպաստ</a>
+                <Link to='mbenefit'>Մայրության նպաստ</Link>
             </li>
             <li>
-                <a href="#">Արձակուրդային</a>
+                <Link to='vacation'>Արձակուրդային</Link>
             </li>
             <li>
-                <a href="#">Տրանսպորտային միջոցների մաքսազերծում </a>
+                <Link to='carclearance'>Տրանսպորտային միջոցների մաքսազերծում</Link>
             </li>
             <li>
-                <a href="#">Տրանսպորտային միջոցների հաշվառում</a>
+                <Link to='caraccountin'>Տրանսպորտային միջոցների հաշվառում</Link>
             </li>
             <li>
-                <a href="#">Կոմունալներ</a>
+                <Link to='utilities'>Կոմունալներ</Link>
             </li>
         </ul>
     )
