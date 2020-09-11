@@ -15,6 +15,7 @@ import CarClearancePage from './views/CalcPage/CarClearancePage';
 import CarAccountingpage from './views/CalcPage/CarAccountingPage';
 import UtilitiesPage from './views/CalcPage/UtilitiesPage';
 import TeInspectionPage from './views/CalcPage/TeInspectionPage';
+import AllPage from './views/CalcPage/AllPage';
 
 
 
@@ -93,6 +94,12 @@ function Routes() {
                 exact
                 layout={CalculationLayout}
                 path='/inspection'
+            />
+            <RouteWithLayout
+                component={AllPage}
+                exact
+                layout={CalculationLayout}
+                path='/calcpage'
             />
             <Redirect to='/' />
 

@@ -1,3 +1,7 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
 .bg-white {
     background-color: #fff
 }
@@ -15,14 +19,11 @@
     border-radius: 5px;
     font-size: 16px;
     color: grey;
-    position: static
+    position: static;
     font: Regular 16px/22px Open Sans;
 }
 .nav-item.active {
     color: #EF5350
-}
-a {
-    color: inherit !important
 }
 .nav-link {
     padding: 5px
@@ -198,36 +199,37 @@ a {
 .footer-calc{
 	background: #3F3AD212 0% 0% no-repeat padding-box;
     opacity: 1;
+    position: absolute;
+    bottom: 0;
 }
 .parent{
     display: flex;
     justify-content: space-around;
-    min-height: 88vh;
+    margin-top: 15px;
 }
 .left{
     width: 25%;
-/*    border:1px solid red;
-    height: 100vh;*/
 }
 .right{
     width: 65%;
 }
 .top{
-    /*height: 200px;*/
-    /*border:1px solid black;*/
-    background: #a99b94;
+    background: #d6ccc7;
     padding: 25px;
 }
 .bottom{
     margin-top: 20px;
-    background: #a99b94;
+    background: #d6ccc7;
 }
 .list-unstyled.components li{
-    border:1px solid #2d2929;
+    border:1px solid #FFFFFF;
     background: #FF7B24;
     text-align: center;
     color: #000;
     padding: 15px;
+}
+.list-unstyled li a{
+    color: #FFFFFF;
 }
 .list-unstyled.components li a:hover{
     text-decoration: none;
@@ -259,4 +261,8 @@ a {
 }
 .bottom-input input{
     margin: 10px;
+}
+
+.header-parent{
+    box-shadow: 0px 0px 3px #ccc;
 }

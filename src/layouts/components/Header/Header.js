@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
 
     return (
-        <div className="container-fluid px-0">
-            <nav className="navbar navbar-expand-md navbar-light bg-white p-0"> <a className="navbar-brand mr-4" href="#"><strong>Logo</strong></a> <button className="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
+        <div className="container-fluid px-0 header-parent">
+            <nav className="navbar navbar-expand-md navbar-light bg-white p-0">  <Link className="navbar-brand mr-4" to='/'><strong>Logo</strong></Link> <button className="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item"> <a className="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Հաշվիչներ<span className="fa fa-angle-down"></span></a>
@@ -14,36 +15,36 @@ const Header = () => {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
-                                                <div className="fa-icon text-center"> <span className="fa fa-shopping-cart"></span> </div>
+                                                <div className="fa-icon text-center"> <span className="fa fa-car"></span> </div>
                                                 <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
-                                                    <h6 className="mb-0">WearCMS</h6> <small className="text-muted">For your project</small>
+                                                    <h6 className="mb-0">Գույքահարկ</h6> <small className="text-muted">Տրանսպորտային</small>
                                                 </a> </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
-                                                <div className="fa-icon text-center"> <span className="fa fa-gamepad"></span> </div>
-                                                <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
-                                                    <h6 className="mb-0">Game+</h6> <small className="text-muted">Monetization of games</small>
-                                                </a> </div>
+                                                <div className="fa-icon text-center"> <span className="fa fa-home"></span> </div>
+                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='salary'>
+                                                    <h6 className="mb-0">Գույքահարկ</h6> <small className="text-muted">Անշարժ գույք</small>
+                                                </Link></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
-                                                <div className="fa-icon text-center"> <span className="fa fa-video-camera"></span> </div>
-                                                <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
-                                                    <h6 className="mb-0">Streetcam</h6> <small className="text-muted">Keep track all year</small>
-                                                </a> </div>
+                                                <div className="fa-icon text-center"> <span className="fa fa-ambulance"></span> </div>
+                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='appa'>
+                                                    <h6 className="mb-0">ԱՊՊԱ</h6> <small className="text-muted">--------</small>
+                                                    </Link></div>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
-                                                <div className="fa-icon text-center"> <span className="fa fa-comment"></span> </div>
-                                                <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
-                                                    <h6 className="mb-0">Teamne</h6> <small className="text-muted">Teamwork</small>
-                                                </a> </div>
+                                                <div className="fa-icon text-center"> <span className="fa fa-female"></span> </div>
+                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='mbenefit'>
+                                                    <h6 className="mb-0">Մայրության նպաստ</h6> <small className="text-muted">-----</small>
+                                                    </Link></div>
                                             </div>
                                         </div>
                                     </div>
@@ -51,17 +52,19 @@ const Header = () => {
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
                                                 <div className="fa-icon text-center"> <span className="fa fa-briefcase"></span> </div>
-                                                <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
-                                                    <h6 className="mb-0">Prospec</h6> <small className="text-muted">Solutions for your business</small>
-                                                </a> </div>
+                                                <div className="d-flex flex-column">   <Link className="dropdown-item" to='salary'>
+                                                    <h6 className="mb-0">Աշխատավարձ</h6> <small className="text-muted">-----</small></Link>
+                                                    
+                                                 </div>
+                                                    
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
-                                                <div className="fa-icon text-center"> <span className="fa fa-bolt"></span> </div>
-                                                <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
-                                                    <h6 className="mb-0">Booster</h6> <small className="text-muted">Increase engagement</small>
-                                                </a> </div>
+                                                <div className="fa-icon text-center"> <span className="fa fa-tint"></span> </div>
+                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='utilities'>
+                                                    <h6 className="mb-0">Կոմունալներ</h6> <small className="text-muted">Գազ,Ջուր,Լույս...</small>
+                                                </Link></div>
                                             </div>
                                         </div>
                                     </div>
@@ -136,7 +139,7 @@ const Header = () => {
                         </li>
                     </ul>
                     <div className="nav-item dropright">
-                        <button type="button" className="btn calc-btn">Հաշվել</button>
+                        <Link type="button" className="btn calc-btn" to='calcpage'>Հաշվել</Link>
                     </div>
                 </div>
             </nav>
