@@ -3,6 +3,7 @@ import { Switch, Redirect } from 'react-router-dom'
 import RouteWithLayout from './components/RouteWithLayout/routeWithLayout'
 import HomePage from './views/HomePage/HomePage'
 import MainLayout from './layouts/Main/MainLayout'
+import OtherLayout from './layouts/Main/OtherLayout'
 import CalculationLayout from './layouts/Calculation/CalculationLayout'
 import AppaPage from './views/CalcPage/AppaPage'
 import CarsPage from './views/CalcPage/CarsPage'
@@ -15,6 +16,8 @@ import CarClearancePage from './views/CalcPage/CarClearancePage';
 import CarAccountingpage from './views/CalcPage/CarAccountingPage';
 import UtilitiesPage from './views/CalcPage/UtilitiesPage';
 import TeInspectionPage from './views/CalcPage/TeInspectionPage';
+import AboutPage from './views/OtherPage/AboutPage';
+import ContactPage from './views/OtherPage/ContactPage';
 import AllPage from './views/CalcPage/AllPage';
 
 
@@ -100,6 +103,18 @@ function Routes() {
                 exact
                 layout={CalculationLayout}
                 path='/calcpage'
+            />
+             <RouteWithLayout
+                component={AboutPage}
+                exact
+                layout={OtherLayout}
+                path='/about'
+            />
+            <RouteWithLayout
+                component={ContactPage}
+                exact
+                layout={OtherLayout}
+                path='/contact'
             />
             <Redirect to='/' />
 
