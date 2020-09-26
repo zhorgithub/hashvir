@@ -214,12 +214,12 @@ html{
     width: 65%;
 }
 .top{
-    background: #d6ccc7;
+    background: #F6F7F8;
     padding: 25px;
 }
 .bottom{
     margin-top: 20px;
-    background: #d6ccc7;
+    background: #F6F7F8;
 }
 .list-unstyled.components li{
     border:1px solid #FFFFFF;
@@ -236,7 +236,7 @@ html{
 }
 #homeSubmenu li,#pageSubmenu li, #avandSubmenu li{
     border:none;
-    border-bottom: 1px solid #8a512b;
+    border-bottom: 1px solid #ffffff;
     background: #FF7B24;
     text-align: center;
     color: #2d2929;
@@ -265,4 +265,15 @@ html{
 
 .header-parent{
     box-shadow: 0px 0px 3px #ccc;
+}
+.margin-header{
+    margin: 20px;
+}
+.site-color{
+    color:#3F3AD2;
+    font-style: italic;
+    font-weight: 700;
+}
+.flex-wrap{
+    flex-wrap: wrap;
 }

@@ -16,9 +16,9 @@ const Header = () => {
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
                                                 <div className="fa-icon text-center"> <span className="fa fa-car"></span> </div>
-                                                <div className="d-flex flex-column"> <a className="dropdown-item" href="#">
+                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='cars'>
                                                     <h6 className="mb-0">Գույքահարկ</h6> <small className="text-muted">Տրանսպորտային</small>
-                                                </a> </div>
+                                                    </Link> </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -71,7 +71,7 @@ const Header = () => {
                                 </div>
                             </div>
                         </li>
-                        <li className="nav-item"> <a className="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources<span className="fa fa-angle-down"></span></a>
+                        {/* <li className="nav-item"> <a className="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources<span className="fa fa-angle-down"></span></a>
                             <div className="dropdown-menu" id="dropdown-menu2" aria-labelledby="navbarDropdown2">
                                 <div className="container">
                                     <div className="row">
@@ -112,8 +112,8 @@ const Header = () => {
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li className="nav-item"> <a className="nav-link" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customers<span className="fa fa-angle-down"></span></a>
+                        </li> */}
+                        {/* <li className="nav-item"> <a className="nav-link" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customers<span className="fa fa-angle-down"></span></a>
                             <div className="dropdown-menu" id="dropdown-menu3" aria-labelledby="navbarDropdown3">
                                 <div className="container">
                                     <div className="row">
@@ -136,10 +136,12 @@ const Header = () => {
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> */}
+                        <li className="nav-item"> <Link  className="nav-link" to='about'>Մեր Մասին</Link></li>
+                        <li className="nav-item"> <Link  className="nav-link" to='contact'>Կապ մեր հետ</Link></li>
                     </ul>
                     <div className="nav-item dropright">
-                        <Link type="button" className="btn calc-btn" to='calcpage'>Հաշվել</Link>
+                        <Link type="button" className="btn calc-btn" to='calcpage'>Հաշվիչներ</Link>
                     </div>
                 </div>
             </nav>
