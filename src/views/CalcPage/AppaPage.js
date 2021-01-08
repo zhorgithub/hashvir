@@ -3,23 +3,23 @@ import React, { useState } from 'react'
 
 const AppaPage = () => {
 
-    const [ZHG, setZHG] = useState(1)
-    const [BM, setBM] = useState(1)
-    const [transport, setTransport] = useState(1)
+    const [ZHG, setZHG] = useState('1')
+    const [BM, setBM] = useState('1')
+    const [transport, setTransport] = useState('1')
     const [busType, setBusType] = useState(false)
-    const [goal, setGoal] = useState(1)
-    const [engine, setEngine] = useState(0.8)
+    const [goal, setGoal] = useState('1')
+    const [engine, setEngine] = useState('0.8')
     const [price, setPrice] = useState()
     const HA = 33122
 
-    // console.log('ZHG ' + ZHG);
-    // console.log('BM ' + BM);
+
     console.log('transport ' + transport + ' goal ' + goal + ' engine ' + engine + ' BM ' + BM + ' ZHG ' + ZHG);
 
 
     const handleTransportChange = (e) => {
 
         const vl = e.target.value
+        console.log(typeof (vl));
 
         if (vl == -1) {
             setBusType(true)
@@ -34,23 +34,27 @@ const AppaPage = () => {
     }
 
     const handleSubmit = () => {
-        console.log(transport);
+        console.log(typeof (transport));
         switch (transport) {
 
-            case '1':
+            case "1":
                 setPrice(Math.round(HA * transport * goal * engine * BM * ZHG / 1000) * 1000)
+                console.log(price);
                 break
-            case '1.185':
+            case "1.185":
                 console.log('ssss');
                 setPrice(Math.round(HA * transport * engine * BM * ZHG / 1000) * 1000)
                 break
-            case 1.44:
+            case "1.44":
                 setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
                 break
-            case 1.33:
+            case "1.133":
                 setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
                 break
-            case 0.59:
+            case "1.33":
+                setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
+                break
+            case "0.59":
                 setPrice(Math.round(HA * BM * ZHG / 1000) * 1000)
                 break
         }
@@ -68,8 +72,8 @@ const AppaPage = () => {
                             <div>
                                 <label className="appa-label">Տրանսպորտային միջոցի տեսակ</label>
                                 <br />
-                                <select className="appa-select" value={"1"} onChange={handleTransportChange}>
-                                    <option value="1">Թեթև մարդատար </option>
+                                <select className="appa-select" value={transport} onChange={handleTransportChange}>
+                                    <option value='1'>Թեթև մարդատար </option>
                                     <option value="1.185">Բեռնատար (ներառյալ ուղևորաբեռնատար)</option>
                                     <option value="-1">Ավտոբուս (ներառյալ միկրոավտոբուս), տրոյլեբուս</option>
                                     <option value="0.59">Մոտոտրանսպորտ (ներառյալ մոտոցիկլ, տրիցիկլ, քվադրիցիկլ)</option>
@@ -81,7 +85,7 @@ const AppaPage = () => {
                                 <div>
                                     <label className="appa-label-count">Նստատեղերի քանակ</label>
                                     <br />
-                                    <select className="appa-select-count" value={"1.44"} onChange={e => setTransport(e.target.value)}>
+                                    <select className="appa-select-count" onChange={e => setTransport(e.target.value)}>
                                         <option value="1.44" >Մինչև 17 (առանց վարորդի)</option>
                                         <option value="1.133">18 և ավել (առանց վարորդի)</option>
                                     </select>
@@ -93,7 +97,7 @@ const AppaPage = () => {
                             <div>
                                 <label className="appa-label-type">Օգտագործման նպատակ</label>
                                 <br />
-                                <select className="appa-select-type" value={"1"} onChange={e => setGoal(e.target.value)}>
+                                <select className="appa-select-type" onChange={e => setGoal(e.target.value)}>
                                     <option value="1" >Անձնական</option>
                                     <option value="1">Հանրային տրանսպորտ</option>
                                     <option value="1.8">Տաքսի/վարձակալություն</option>
@@ -107,7 +111,7 @@ const AppaPage = () => {
                             <br />'
                             {transport == 1 ?
                                 <div>
-                                    <select className="appa-select-power" value={"0.8"} onChange={e => setEngine(e.target.value)}>
+                                    <select className="appa-select-power" onChange={e => setEngine(e.target.value)}>
                                         <option value="0.8" >Մինչև 80 ձիաուժ</option>
                                         <option value="1">81-ից 140 ձիաուժ</option>
                                         <option value="1.38">141-ից 230 ձիաուժ</option>
@@ -131,7 +135,7 @@ const AppaPage = () => {
                         <br />
                         <label className="appa-label-date">Ժամկետ</label>
                         <br />
-                        <select className="appa-select-date" value={"1"} onChange={e => setZHG(e.target.value)}>
+                        <select className="appa-select-date" onChange={e => setZHG(e.target.value)}>
                             <option value="1">1 տարի</option>
                             <option value="0.95">11 ամիս</option>
                             <option value="0.85">10 ամիս</option>
@@ -150,7 +154,7 @@ const AppaPage = () => {
                         <br />
                         <label className="appa-label-date">Բոնուս մալուսի դաս</label>
                         <br />
-                        <select className="appa-select-date" value={"1"} onChange={e => setBM(e.target.value)}>
+                        <select className="appa-select-date" value={BM} onChange={e => setBM(e.target.value)}>
                             <option value="0․5">Դաս 1</option>
                             <option value="0․65">Դաս 2</option>
                             <option value="0․75">Դաս 3</option>
@@ -186,13 +190,13 @@ const AppaPage = () => {
             <div className="bottom">
                 <div className="bottom-div">
                     <div className="top-text"><h3>Result: {price}</h3></div>
-                    <center>
+                    {/* <center>
                         <div className="bottom-input">
                             <input type="text" name="" /><br />
                             <input type="text" name="" /><br />
                             <input type="text" name="" /><br />
                         </div>
-                    </center>
+                    </center> */}
                 </div>
             </div>
         </>
