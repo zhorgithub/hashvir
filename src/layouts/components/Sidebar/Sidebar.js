@@ -5,23 +5,23 @@ function Sidebar(props) {
     const { children } = props;
     return (
         <ul className="list-unstyled components">
-            <li>
+            {/* <li>
             <Link to='salary'>Աշխատավարձ</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
                 <Link to='realEstate'>Գույքահարկ</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
                 <Link to='cars'>Տրանսպորտային միջոցների գույքահարկ</Link>
-            </li>
+            </li> */}
 
             <li>
                 <Link to='appa'>Ապպա</Link>
             </li>
-            <li>
+            {/* <li>
                 <Link to='inspection'>Տեխզննում</Link>
-            </li>
-            <li className="active">
+            </li> */}
+            {/* <li className="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Վարկ</a>
                 <ul className="collapse list-unstyled" id="homeSubmenu">
                     <li>
@@ -34,8 +34,8 @@ function Sidebar(props) {
                         <a href="#">Վարկ 3</a>
                     </li>
                 </ul>
-            </li> 
-            <li className="active">
+            </li>  */}
+            {/* <li className="active">
                 <a href="#avandSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Ավանդ</a>
                 <ul className="collapse list-unstyled" id="avandSubmenu">
                     <li>
@@ -48,8 +48,8 @@ function Sidebar(props) {
                         <a href="#">Ավանդ 3</a>
                     </li>
                 </ul>
-            </li> 
-            <li>
+            </li>  */}
+            {/* <li>
                 <Link to='exchange'>Փոխարժեք</Link>
             </li>
             <li>
@@ -57,16 +57,16 @@ function Sidebar(props) {
             </li>
             <li>
                 <Link to='vacation'>Արձակուրդային</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
                 <Link to='carclearance'>Տրանսպորտային միջոցների մաքսազերծում</Link>
             </li>
             <li>
                 <Link to='caraccountin'>Տրանսպորտային միջոցների հաշվառում</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
                 <Link to='utilities'>Կոմունալներ</Link>
-            </li>
+            </li> */}
         </ul>
     )
 

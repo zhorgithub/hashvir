@@ -23,7 +23,7 @@ const AppaPage = () => {
 
         if (vl == -1) {
             setBusType(true)
-            setTransport(1.44)
+            setTransport("1.44")
             return
         } else {
             setBusType(false)
@@ -55,7 +55,10 @@ const AppaPage = () => {
                 setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
                 break
             case "0.59":
-                setPrice(Math.round(HA * BM * ZHG / 1000) * 1000)
+                console.log(HA);
+                console.log(BM);
+                console.log(ZHG);
+                setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
                 break
         }
 
@@ -72,7 +75,7 @@ const AppaPage = () => {
                             <div>
                                 <label className="appa-label">Տրանսպորտային միջոցի տեսակ</label>
                                 <br />
-                                <select className="appa-select" value={transport} onChange={handleTransportChange}>
+                                <select className="appa-select" onChange={handleTransportChange}>
                                     <option value='1'>Թեթև մարդատար </option>
                                     <option value="1.185">Բեռնատար (ներառյալ ուղևորաբեռնատար)</option>
                                     <option value="-1">Ավտոբուս (ներառյալ միկրոավտոբուս), տրոյլեբուս</option>
@@ -106,10 +109,10 @@ const AppaPage = () => {
                             </div>
                             : <></>}
                         <br />
-                        <div className="parent-select">
-                            <label className="appa-label-power">ՏՄ շարժիչի հզորությունը</label>
-                            <br />'
-                            {transport == 1 ?
+                        {transport == 1 || transport == 1.185 ?
+                            <div className="parent-select">
+                                <label className="appa-label-power">ՏՄ շարժիչի հզորությունը</label>
+                                <br />
                                 <div>
                                     <select className="appa-select-power" onChange={e => setEngine(e.target.value)}>
                                         <option value="0.8" >Մինչև 80 ձիաուժ</option>
@@ -118,20 +121,8 @@ const AppaPage = () => {
                                         <option value="1.64">231 և ավելի ձիաուժ</option>
                                     </select>
                                 </div>
-                                : <></>}
-                            {transport == 1.185 ?
-                                <div>
-                                    <select className="appa-select-power" value={"0.8"} onChange={e => setEngine(e.target.value)}>
-                                        <option value="0.8">Մինչև 80 ձիաուժ</option>
-                                        <option value="1">81-ից 140 ձիաուժ</option>
-                                        <option value="1.09">141-ից 230 ձիաուժ</option>
-                                        <option value="1.1">231 և ավելի ձիաուժ</option>
-                                    </select>
-                                </div>
-                                :
-                                <></>
-                            }
-                        </div>
+                            </div>
+                            : <></>}
                         <br />
                         <label className="appa-label-date">Ժամկետ</label>
                         <br />
