@@ -212,6 +212,7 @@ html{
 }
 .right{
     width: 65%;
+    margin-bottom: 75px;
 }
 .top{
     background: #F6F7F8;
@@ -276,4 +277,43 @@ html{
 }
 .flex-wrap{
     flex-wrap: wrap;
+}
+.salary{
+    background: #F6F7F8;
+    padding: 20px;
+}
+
+.salary input,.salary textarea,.salary select {
+    background: none;
+    color: #ff7b24;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 320px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ff7b24;
+}
+
+.salary input:focus,.salary textarea:focus,.salary select:focus {
+   outline: none;
+}
+.salary select option{
+    background: #e9ebec;
+}
+.sep{
+    background: #ff7b24;
+    box-shadow: none;
+    border: none;
+    height: 2px;
+    width: 25%;
+    margin: 0px auto 45px auto;
+}
+
+.salary .salary-select-kut{
+    width: 100%;
+}
+.salary .calc-btn{
+    position: relative;
+    left: 78%;
 }

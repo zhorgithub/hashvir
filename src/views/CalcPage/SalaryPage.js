@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 const SalaryPage = () => {
 
     const [ready, setReady] = useState(true)
@@ -30,14 +29,22 @@ const SalaryPage = () => {
         <>
             <form onSubmit={handleSubmit}>
                 <div className="salary">
-                    <label className="salary-label">Աշխատավարձ</label><br />
-                    <select className="salary-select"  >
-                        <option value="1">Մաքուր</option>
-                        <option value="2">Կեղտոտ</option>
-                    </select>
-                    <br />
-                    <label className="salary-tt">Աշխատավարձ Չափը</label><br />
-                    <input type='number' className="salary-price" />
+                    <div className="top-text"><h3>Աշխատավարձի Հաշվիչ</h3></div>
+                    <hr className="sep" />
+                    <div className="parent-select">
+                        <div>
+                            <label className="salary-label">Աշխատավարձ</label><br />
+                            <select className="salary-select"  >
+                                <option value="1">Մաքուր</option>
+                                <option value="2">Կեղտոտ</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div>
+                            <label className="salary-tt">Աշխատավարձ Չափը</label><br />
+                            <input type='number' className="salary-price"  placeholder="Օրինակ ՝ 100000" />
+                        </div>
+                    </div>
                     <br />
                     <label className="salary-kut">Մասնակցում եք արդյո՞ք պարտադիր կուտակային կենսաթոշակային համակարգին: Եթե այո, ապա ի՞նչ հիմունքներով</label><br />
                     <select className="salary-select-kut"  >
@@ -55,16 +62,17 @@ const SalaryPage = () => {
                     </select>
                     <br /><br />
                     <button type="submit" className="btn calc-btn"  >Հաշվել</button>
-                </div>
-                {ready ?
+                    {ready ?
                     <>
-                        <h3>Աշխատավարձ {startSalary}</h3>
-                        <h2>Եկամտային հարկ {ekamtayin}</h2>
-                        <h2>Կուտակային կենս․ {kutakayin}</h2>
+                        <h3> {startSalary ? 'Աշխատավարձ - ' + startSalary : '' }</h3>
+                        <h2> {ekamtayin ? 'Եկամտային հարկ - ' + ekamtayin : ''}</h2>
+                        <h2> {kutakayin ? 'Կուտակային կենս․ - ' + kutakayin : ''}</h2>
                         <h2>Դրոշմանշային վճար 1000</h2>
-                        <h2>Արդյունք {finalSalary}</h2>
+                        <h2> {finalSalary > 1000 ? 'Արդյունք - ' + finalSalary : ''}</h2>
                     </>
                     : null}
+                </div>
+                
             </form>
         </>
     )
