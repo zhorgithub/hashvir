@@ -304,7 +304,9 @@ html{
 .realestate input {
    outline: none;
 }
-.salary select option{
+.salary select option,
+.cars select option,
+.appa select option{
     background: #e9ebec;
 }
 .sep{
