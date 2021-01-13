@@ -209,6 +209,7 @@ html{
 }
 .left{
     width: 25%;
+    margin-bottom: 75px;
 }
 .right{
     width: 65%;
@@ -250,12 +251,6 @@ html{
     display: flex;
     justify-content: space-between;
 }
-.parent-select div{
-    width: 50%;
-}
-.parent-select div select{
-    width: 90%;
-}
 .top-text h3{
     text-align: center;
     padding: 15px;
@@ -278,24 +273,35 @@ html{
 .flex-wrap{
     flex-wrap: wrap;
 }
-.salary{
+.cars , .salary{
     background: #F6F7F8;
     padding: 20px;
 }
-
-.salary input,.salary textarea,.salary select {
+.salary input,
+.salary textarea,
+.salary select,
+.cars input,
+.cars select,
+.appa select,
+.realestate input[type=number]
+ {
     background: none;
     color: #ff7b24;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 320px;
+    width: 380px;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #ff7b24;
 }
-
-.salary input:focus,.salary textarea:focus,.salary select:focus {
+.salary input:focus,
+.salary textarea:focus,
+.salary select:focus,
+.cars input,
+.cars select,
+.appa select,
+.realestate input {
    outline: none;
 }
 .salary select option{
@@ -309,11 +315,63 @@ html{
     width: 25%;
     margin: 0px auto 45px auto;
 }
-
-.salary .salary-select-kut{
+.salary .salary-select-kut,
+.cars .cars-select,
+.appa .appa-select{
     width: 100%;
 }
-.salary .calc-btn{
+.salary .calc-btn,
+.cars .calc-btn,
+.appa .calc-btn,
+.realestate .calc-btn{
     position: relative;
     left: 78%;
+}
+.realestate-radio label,.realestate-radio input{
+    cursor: pointer;
+    color: #ff7b24;
+}
+.realestate-radio{
+    display: flex;
+    justify-content: space-between;
+}
+.realestate-radio div{
+    width: 50%
+}
+.realestate-radio label{
+    margin-right: 15px;
+}
+.realestate  input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.realestate input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+.hashvich-right{
+    display: flex;
+}
+.hashvich-right input:focus{
+    outline: none;
+    border: 1px solid #ff7b24;
 }

@@ -7,6 +7,7 @@ const RealEstatePage = () => {
     return (
         <>
             <div className="realestate">
+               <div className="top-text"><h3>Անշարժ Գույքի Գույքահարկ</h3></div>
                 <div className="realestate-radio">
                     <div>
                         <label htmlFor="realestate-vk">Որոնել ըստ վկայականի համարի</label>

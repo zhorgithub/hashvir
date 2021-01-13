@@ -24,7 +24,7 @@ const Header = () => {
                                         <div className="col-md-6">
                                             <div className="row d-flex tab">
                                                 <div className="fa-icon text-center"> <span className="fa fa-home"></span> </div>
-                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='salary'>
+                                                <div className="d-flex flex-column"> <Link className="dropdown-item" to='realEstate'>
                                                     <h6 className="mb-0">Գույքահարկ</h6> <small className="text-muted">Անշարժ գույք</small>
                                                 </Link></div>
                                             </div>
@@ -140,8 +140,9 @@ const Header = () => {
                         <li className="nav-item"> <Link  className="nav-link" to='about'>Մեր Մասին</Link></li>
                         <li className="nav-item"> <Link  className="nav-link" to='contact'>Կապ մեր հետ</Link></li>
                     </ul>
-                    <div className="nav-item dropright">
-                        <Link type="button" className="btn calc-btn" to='calcpage'>Հաշվիչներ</Link>
+                    <div className="nav-item dropright hashvich-right">
+                    <input type='text'  placeholder="Չգտնված Հաշվիչ" name="massage-me"/>
+                        <button type="button" className="btn calc-btn" >Ուղղարկել</button>
                     </div>
                 </div>
             </nav>
