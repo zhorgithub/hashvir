@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <div className="container-fluid px-0 header-parent">
-            <nav className="navbar navbar-expand-md navbar-light bg-white p-0">  <Link className="navbar-brand mr-4" to='/'><strong>Logo</strong></Link> <button className="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
+            <nav className="navbar navbar-expand-md navbar-light bg-white p-0"><Link className="navbar-brand mr-4" to='/'><img className="logo" src="img/Calculator.png" /></Link> <button className="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item"> <a className="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Հաշվիչներ<span className="fa fa-angle-down"></span></a>
@@ -141,7 +141,7 @@ const Header = () => {
                         <li className="nav-item"> <Link  className="nav-link" to='contact'>Կապ մեր հետ</Link></li>
                     </ul>
                     <div className="nav-item dropright hashvich-right">
-                    <input type='text'  placeholder="Չգտնված Հաշվիչ" name="massage-me"/>
+                    <input type='text' className="yoid"  placeholder="Ի՞նչ նոր հաշվիչ կուզեք տեսնել" name="massage-me"/>
                         <button type="button" className="btn calc-btn" >Ուղղարկել</button>
                     </div>
                 </div>

@@ -2,6 +2,9 @@ html{
     position: relative;
     min-height: 100%;
 }
+.logo{
+    height: 50px;
+}
 .bg-white {
     background-color: #fff
 }
@@ -376,4 +379,18 @@ html{
 .hashvich-right input:focus{
     outline: none;
     border: 1px solid #ff7b24;
+}
+.yoid{
+    width: 250px;
+}
+body .carousel .slide img{
+    width: auto ;
+}
+
+body .carousel .slide .slider img{
+    position: relative;
+    left: 50px;
+}
+.appa-button{
+    width: auto;
 }
