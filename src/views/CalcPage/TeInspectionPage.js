@@ -6,6 +6,7 @@ const TeInspectionPage = () => {
     const [taretiv, setTaretiv] = useState()
     const [dzi, setDzi] = useState()
     const [dziIndex, setDziIndex] = useState()
+    const [transport, setTransport] = useState('1')
     const [znnumFee, setZnnumFee] = useState(5500)
     const [bnapTax, setBnapTax] = useState()
     const [ready, setReady] = useState(false)
@@ -25,19 +26,16 @@ const TeInspectionPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // console.log(znnumFee);
-        // console.log(bnapTax);
-        console.log(taretiv);
-        console.log(dzi);
-        console.log(arr1[dziIndex][taretiv]);
-        setBnapTax(dzi * arr1[dziIndex][taretiv]);
-
+        if (transport == (1 || 2 || 3)) {
+            setBnapTax(dzi * arr1[dziIndex][taretiv]);
+        }
         setReady(true)
     }
 
     const handleChangeTransport = (e) => {
         const a = e.target.value
         console.log(a);
+        setTransport(a)
         switch (a) {
             case '1':
                 setZnnumFee(5500)
@@ -129,25 +127,26 @@ const TeInspectionPage = () => {
                                 <option value="8">Մոտոցիկլետներ կամ մոպեդներ</option>
                             </select><br />
                         </div>
+                    </div>
+                    {transport == (1 || 2 || 3) ?
                         <div>
-                            <label className="salary-label">Տարեթիվ</label><br />
-                            <select className="salary-select" onChange={handleChangeTaretiv} >
-                                {Array.from(Array(todayYear - 1949).keys()).map(i => (
-                                    <option key={i} value={i}>{todayYear - i}</option>
-                                ))}
+                            <div>
+                                <label className="salary-label">Տարեթիվ</label><br />
+                                <select className="salary-select" onChange={handleChangeTaretiv} >
+                                    {Array.from(Array(todayYear - 1949).keys()).map(i => (
+                                        <option key={i} value={i}>{todayYear - i}</option>
+                                    ))}
 
-                            </select>
+                                </select>
+                            </div>
+
+
+                            <div>
+                                <label className="salary-tt"  > Ձիաուժը</label><br />
+                                <input type='number' className="salary-price" onChange={handleChangeDzi} placeholder="Օրինակ ՝ 120" />
+                            </div>
                         </div>
-
-                    </div>
-                    <div>
-                        <label className="salary-tt"  > Ձիաուժը</label><br />
-                        <input type='number' className="salary-price" onChange={handleChangeDzi} placeholder="Օրինակ ՝ 120" />
-                    </div>
-
-
-
-
+                        : <></>}
                     <button type="submit" className="btn calc-btn"  >Հաշվել</button>
                     {ready ?
                         <>
