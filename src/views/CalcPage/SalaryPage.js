@@ -105,30 +105,44 @@ const SalaryPage = () => {
 
             }
         } else if (hashvarkType == 1) {
+            kutak = 0
             switch (true) {
                 case (sal <= 100000):
                     droshm = 1500
-                    kutak = sal * 3.5 / 100
+                    if (kutakayinTokos) {
+                        kutak = sal * kutakayinTokos / 100
+                    }
                     break;
                 case (sal > 100000 && sal <= 200000):
                     droshm = 3000
-                    kutak = sal * 3.5 / 100
+                    if (kutakayinTokos) {
+                        kutak = sal * kutakayinTokos / 100
+                    }
                     break;
                 case (sal > 200000 && sal <= 500000):
                     droshm = 5500
-                    kutak = sal * 3.5 / 100
+                    if (kutakayinTokos) {
+                        kutak = sal * kutakayinTokos / 100
+                    }
                     break;
                 case (sal > 500000 && sal <= 1000000):
                     droshm = 8500
-                    kutak = (sal / 10) - 32500
+                    if (kutakayinTokos) {
+                        kutak = (sal * kutakayinTokos / 100) - 32500
+                    }
+
                     break;
                 case (sal > 1000000 && sal <= 1020000):
                     droshm = 15000
-                    kutak = (sal / 10) - 32500
+                    if (kutakayinTokos) {
+                        kutak = (sal / kutakayinTokos) - 32500
+                    }
                     break;
                 case (sal > 1020000):
                     droshm = 15000
-                    kutak = 69500
+                    if (kutakayinTokos) {
+                        kutak = 69500
+                    }
             }
             setDroshmanish(droshm)
             setKutakayin(kutak)
@@ -184,7 +198,6 @@ const SalaryPage = () => {
                     </select>
                     <br /><br />
                     <button type="submit" className="btn calc-btn"  >Հաշվել</button>
-
                     {ready ?
                         <>
                             <h3> {'Աշխատավարձ - ' + startSalary}</h3>
@@ -195,7 +208,6 @@ const SalaryPage = () => {
                         </>
                         : null}
                 </div>
-
             </form>
         </>
     )
