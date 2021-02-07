@@ -1,8 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import emailjs from 'emailjs-com'
 
 const Header = () => {
 
+    const handleSendEmail = () => {
+
+        const templateParams = {
+            content: "esim inch namak"
+        }
+        emailjs.send(
+            'service_ggnk25g',
+            'template_j1uurpq',
+            { content: "esim inch namak" },
+            'user_8Dt0iQFa52BMqbsYRVowX'
+        )
+    }
 
     return (
         <div className="container-fluid px-0 header-parent">
@@ -18,7 +31,7 @@ const Header = () => {
                                                 <div className="fa-icon text-center"> <span className="fa fa-car"></span> </div>
                                                 <div className="d-flex flex-column"> <Link className="dropdown-item" to='cars'>
                                                     <h6 className="mb-0">Գույքահարկ</h6> <small className="text-muted">Տրանսպորտային</small>
-                                                    </Link> </div>
+                                                </Link> </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -36,7 +49,7 @@ const Header = () => {
                                                 <div className="fa-icon text-center"> <span className="fa fa-ambulance"></span> </div>
                                                 <div className="d-flex flex-column"> <Link className="dropdown-item" to='appa'>
                                                     <h6 className="mb-0">ԱՊՊԱ</h6> <small className="text-muted">--------</small>
-                                                    </Link></div>
+                                                </Link></div>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -44,7 +57,7 @@ const Header = () => {
                                                 <div className="fa-icon text-center"> <span className="fa fa-female"></span> </div>
                                                 <div className="d-flex flex-column"> <Link className="dropdown-item" to='mbenefit'>
                                                     <h6 className="mb-0">Մայրության նպաստ</h6> <small className="text-muted">-----</small>
-                                                    </Link></div>
+                                                </Link></div>
                                             </div>
                                         </div>
                                     </div>
@@ -54,9 +67,9 @@ const Header = () => {
                                                 <div className="fa-icon text-center"> <span className="fa fa-briefcase"></span> </div>
                                                 <div className="d-flex flex-column">   <Link className="dropdown-item" to='salary'>
                                                     <h6 className="mb-0">Աշխատավարձ</h6> <small className="text-muted">-----</small></Link>
-                                                    
-                                                 </div>
-                                                    
+
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -137,12 +150,12 @@ const Header = () => {
                                 </div>
                             </div>
                         </li> */}
-                        <li className="nav-item"> <Link  className="nav-link" to='about'>Մեր Մասին</Link></li>
-                        <li className="nav-item"> <Link  className="nav-link" to='contact'>Կապ մեր հետ</Link></li>
+                        <li className="nav-item"> <Link className="nav-link" to='about'>Մեր Մասին</Link></li>
+                        <li className="nav-item"> <Link className="nav-link" to='contact'>Կապ մեր հետ</Link></li>
                     </ul>
                     <div className="nav-item dropright hashvich-right">
-                    <input type='text' className="yoid"  placeholder="Ի՞նչ նոր հաշվիչ կուզեք տեսնել" name="massage-me"/>
-                        <button type="button" className="btn calc-btn" >Ուղղարկել</button>
+                        <input type='text' className="yoid" placeholder="Ի՞նչ նոր հաշվիչ կուզեք տեսնել" name="massage-me" />
+                        <button type="button" className="btn calc-btn" onClick={handleSendEmail} >Ուղարկել</button>
                     </div>
                 </div>
             </nav>
