@@ -52,14 +52,14 @@ const Header = () => {
                                                 </Link></div>
                                             </div>
                                         </div>
-                                        <div className="col-md-6">
+                                        {/* <div className="col-md-6">
                                             <div className="row d-flex tab">
                                                 <div className="fa-icon text-center"> <span className="fa fa-female"></span> </div>
                                                 <div className="d-flex flex-column"> <Link className="dropdown-item" to='mbenefit'>
                                                     <h6 className="mb-0">Մայրության նպաստ</h6> <small className="text-muted">-----</small>
                                                 </Link></div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6">
@@ -72,14 +72,14 @@ const Header = () => {
 
                                             </div>
                                         </div>
-                                        <div className="col-md-6">
+                                        {/* <div className="col-md-6">
                                             <div className="row d-flex tab">
                                                 <div className="fa-icon text-center"> <span className="fa fa-tint"></span> </div>
                                                 <div className="d-flex flex-column"> <Link className="dropdown-item" to='utilities'>
                                                     <h6 className="mb-0">Կոմունալներ</h6> <small className="text-muted">Գազ,Ջուր,Լույս...</small>
                                                 </Link></div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

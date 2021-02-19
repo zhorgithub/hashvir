@@ -181,10 +181,13 @@ html{
     width: 90px;
     border-radius: 50%;
     bottom: 65%;
-    left: 32%;
     display: flex;
     justify-content: center;
     align-items: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .calc-icon i{
 	font-size: 57px;

@@ -18,34 +18,34 @@ const HomePage = () => {
                     <div className="row">
                         <div className="col col1">
                             <div className="icon-part-parent">
-                                <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
+                                <div className="calc-icon"><i className="fa fa-suitcase" aria-hidden="true"></i></div>
                                 <p className="calc-icon-text"><Link to='/salary'>Աշխատավարձի հաշվիչ</Link></p>
                             </div>
                         </div>
                         <div className="col col2">
                             <div className="icon-part-parent">
-                                <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
+                                <div className="calc-icon"><i className="fa fa-home" aria-hidden="true"></i></div>
                                 <p className="calc-icon-text"><Link to='realEstate'>Գույքահարկի հաշվիչ</Link></p>
                             </div>
                         </div>
                         <div className="col col3">
                             <div className="icon-part-parent">
-                                <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
+                                <div className="calc-icon"><i className="fa fa-cab" aria-hidden="true"></i></div>
                                 <p className="calc-icon-text"><Link to='appa'>ԱՊՊԱ</Link></p>
                             </div>
                         </div>
-                        <div className="col col4">
+                       <div className="col col4">
                             <div className="icon-part-parent">
-                                <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
-                                <p className="calc-icon-text">Ավանդային հաշվիչ</p>
+                                <div className="calc-icon"><i className="fa fa-car" aria-hidden="true"></i></div>
+                                <p className="calc-icon-text"><Link to='inspection'>Տեխզննում</Link></p>
                             </div>
                         </div>
-                        <div className="col col5">
+                        {/*  <div className="col col5">
                             <div className="icon-part-parent">
                                 <div className="calc-icon"><i className="fa fa-tree" aria-hidden="true"></i></div>
                                 <p className="calc-icon-text">Վարկային</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

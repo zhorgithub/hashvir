@@ -21,7 +21,7 @@ function Sidebar(props) {
              <li>
                 <Link to='inspection'>Տեխզննում</Link>
             </li> 
-             <li className="active">
+            {/* <li className="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Վարկ</a>
                 <ul className="collapse list-unstyled" id="homeSubmenu">
                     <li>
@@ -66,7 +66,7 @@ function Sidebar(props) {
             </li> 
              <li>
                 <Link to='utilities'>Կոմունալներ</Link>
-            </li> 
+            </li> */}
         </ul>
     )
 

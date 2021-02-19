@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className="container-fluid footer-calc flex-calc">
-            <p className="footer-text">&copy; 2020 Բոլոր իրավունքները պաշտպանված են.</p>
+            <p className="footer-text">&copy; 2021 Hashvich.am Բոլոր իրավունքները պաշտպանված են.</p>
         </div>
     )
 }
