@@ -195,8 +195,10 @@ html{
 }
 .all-calc{
 	width: 278px;
-	height: 52px;
-	margin: 30px 0 60px 0;
+    height: 38px;
+    margin: 12px 0 90px 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px indianred;
 }
 .flex-calc{
 	display: flex;
@@ -396,4 +398,14 @@ body .carousel .slide .slider img{
 }
 .appa-button{
     width: auto;
+}
+.center-text{
+    text-align: center;
+    font: Bold 24px/33px Open Sans;
+    letter-spacing: 0px;
+    margin: 20px;
+    color: #191919;
+}
+.home-page-text{
+    text-align: center;
 }
