@@ -23,6 +23,9 @@ const SalaryPage = () => {
         let droshm
         let x
         if (hashvarkType == 0) {
+            console.log('hashvarktype', hashvarkType);
+            console.log('kutakayintokos', kutakayinTokos);
+            console.log('sal', sal);
             if (kutakayinTokos == 0) {
                 kutak = 0
                 switch (true) {
@@ -77,7 +80,6 @@ const SalaryPage = () => {
                         break;
                     case (sal > 367000 && sal <= 704000):
                         droshm = 8500
-                        setKutakayinTokos(10)
                         x = Math.round((sal + droshm - 32500) * 100 / (100 - ekamtayinTokos - 10))
                         setEkamtayin(Math.round(x * ekamtayinTokos / 100))
                         setKutakayin(Math.round((x * 10 / 100) - 32500))
@@ -86,7 +88,6 @@ const SalaryPage = () => {
                         break;
                     case (sal > 704000 && sal <= 711100):
                         droshm = 15000
-                        setKutakayinTokos(10)
                         x = Math.round((sal + droshm - 32500) * 100 / (100 - ekamtayinTokos - 10))
                         setEkamtayin(Math.round(x * ekamtayinTokos / 100))
                         setKutakayin(Math.round((x * 10 / 100) - 32500))
@@ -95,7 +96,6 @@ const SalaryPage = () => {
                         break;
                     case (sal > 711100):
                         droshm = 15000
-                        setKutakayinTokos('fixed')
                         setKutakayin(69500)
                         x = Math.round((sal + droshm + 69500) * 100 / (100 - ekamtayinTokos))
                         setEkamtayin(Math.round(x * ekamtayinTokos / 100))

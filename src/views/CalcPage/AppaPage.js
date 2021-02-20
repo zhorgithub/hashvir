@@ -13,13 +13,10 @@ const AppaPage = () => {
     const HA = 33122
 
 
-    console.log('transport ' + transport + ' goal ' + goal + ' engine ' + engine + ' BM ' + BM + ' ZHG ' + ZHG);
-
-
     const handleTransportChange = (e) => {
 
         const vl = e.target.value
-        console.log(typeof (vl));
+
 
         if (vl == -1) {
             setBusType(true)
@@ -34,15 +31,13 @@ const AppaPage = () => {
     }
 
     const handleSubmit = () => {
-        console.log(typeof (transport));
         switch (transport) {
 
             case "1":
                 setPrice(Math.round(HA * transport * goal * engine * BM * ZHG / 1000) * 1000)
-                console.log(price);
+
                 break
             case "1.185":
-                console.log('ssss');
                 setPrice(Math.round(HA * transport * engine * BM * ZHG / 1000) * 1000)
                 break
             case "1.44":
@@ -55,9 +50,6 @@ const AppaPage = () => {
                 setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
                 break
             case "0.59":
-                console.log(HA);
-                console.log(BM);
-                console.log(ZHG);
                 setPrice(Math.round(HA * transport * BM * ZHG / 1000) * 1000)
                 break
         }
