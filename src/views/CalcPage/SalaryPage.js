@@ -200,11 +200,17 @@ const SalaryPage = () => {
                     <button type="submit" className="btn calc-btn"  >Հաշվել</button>
                     {ready ?
                         <>
-                            <h3> {'Աշխատավարձ - ' + startSalary}</h3>
-                            <h2> {'Եկամտային հարկ - ' + ekamtayin}</h2>
-                            <h2> {'Կուտակային կենս․ - ' + kutakayin}</h2>
-                            <h2>{"Դրոշմանշային վճար - " + droshmanish}</h2>
-                            <h2> {'Արդյունք - ' + finalSalary}</h2>
+                        <div className="salary-result-parent">
+                            <h2> <span className="salary-result">Աշխատավարձ</span> { startSalary}</h2>
+                            <span className="salary-plus">+</span>
+                            <h2> <span className="salary-result">Եկամտային հարկ</span> { ekamtayin}</h2>
+                            <span className="salary-plus">+</span>
+                            <h2> <span className="salary-result">Կուտակային կենս․</span> { kutakayin}</h2>
+                            <span className="salary-plus">+</span>
+                            <h2> <span className="salary-result">Դրոշմանշային վճար</span> { droshmanish}</h2>
+                            <h2 className="salary-result-num">______________________</h2>
+                            <h2> <span className="salary-result">Արդյունք</span> { finalSalary}</h2>
+                            </div>
                         </>
                         : null}
                 </div>
