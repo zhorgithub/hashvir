@@ -166,7 +166,13 @@ const SalaryPage = () => {
         setStartSalary(e)
         setReady(false)
     }
+    const twoCalls = e => {
+        setHashvarkType(e.target.value);
+        if (finalSalary > 0) {
+            // handleSubmit(e);
+        }
 
+    }
 
     return (
         <>
@@ -177,7 +183,7 @@ const SalaryPage = () => {
                     <div className="parent-select">
                         <div>
                             <label className="salary-label">Աշխատավարձ</label><br />
-                            <select className="salary-select" value={hashvarkType} onChange={(e) => setHashvarkType(e.target.value)}>
+                            <select className="salary-select" value={hashvarkType} onChange={twoCalls}>
                                 <option value="0">Մաքուր</option>
                                 <option value="1">Կեղտոտ</option>
                             </select>
@@ -209,14 +215,14 @@ const SalaryPage = () => {
                         <>
                             <div className="salary-result-parent">
                                 <h2> <span className="salary-result">Աշխատավարձ</span> {startSalary}</h2>
-                                <span className="salary-plus">+</span>
+                                <span className="salary-plus"> {hashvarkType != 0 ? ('-') : ('+')} </span>
                                 <h2> <span className="salary-result">Եկամտային հարկ</span> {ekamtayin}</h2>
-                                <span className="salary-plus">+</span>
+                                <span className="salary-plus">{hashvarkType != 0 ? ('-') : ('+')}</span>
                                 <h2> <span className="salary-result">Կուտակային կենս․</span> {kutakayin}</h2>
-                                <span className="salary-plus">+</span>
+                                <span className="salary-plus">{hashvarkType != 0 ? ('-') : ('+')}</span>
                                 <h2> <span className="salary-result">Դրոշմանշային վճար</span> {droshmanish}</h2>
                                 <h2 className="salary-result-num">______________________</h2>
-                                <h2> <span className="salary-result">Արդյունք</span> {finalSalary}</h2>
+                                <h2 className="salary-result-num"> <span className="salary-result">Արդյունք</span> {finalSalary}</h2>
                             </div>
                         </>
                         : null}
