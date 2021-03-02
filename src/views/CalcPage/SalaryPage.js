@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify';
 
 const SalaryPage = () => {
 
@@ -14,8 +15,14 @@ const SalaryPage = () => {
     const [hashvarkType, setHashvarkType] = useState('0')
 
 
+
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (!startSalary) {
+            toast.warn('Լրացրեք աշխատավարձի չափը')
+            return
+        }
+
 
         let sal = parseInt(startSalary)
         let ekamt
@@ -200,16 +207,16 @@ const SalaryPage = () => {
                     <button type="submit" className="btn calc-btn"  >Հաշվել</button>
                     {ready ?
                         <>
-                        <div className="salary-result-parent">
-                            <h2> <span className="salary-result">Աշխատավարձ</span> { startSalary}</h2>
-                            <span className="salary-plus">+</span>
-                            <h2> <span className="salary-result">Եկամտային հարկ</span> { ekamtayin}</h2>
-                            <span className="salary-plus">+</span>
-                            <h2> <span className="salary-result">Կուտակային կենս․</span> { kutakayin}</h2>
-                            <span className="salary-plus">+</span>
-                            <h2> <span className="salary-result">Դրոշմանշային վճար</span> { droshmanish}</h2>
-                            <h2 className="salary-result-num">______________________</h2>
-                            <h2> <span className="salary-result">Արդյունք</span> { finalSalary}</h2>
+                            <div className="salary-result-parent">
+                                <h2> <span className="salary-result">Աշխատավարձ</span> {startSalary}</h2>
+                                <span className="salary-plus">+</span>
+                                <h2> <span className="salary-result">Եկամտային հարկ</span> {ekamtayin}</h2>
+                                <span className="salary-plus">+</span>
+                                <h2> <span className="salary-result">Կուտակային կենս․</span> {kutakayin}</h2>
+                                <span className="salary-plus">+</span>
+                                <h2> <span className="salary-result">Դրոշմանշային վճար</span> {droshmanish}</h2>
+                                <h2 className="salary-result-num">______________________</h2>
+                                <h2> <span className="salary-result">Արդյունք</span> {finalSalary}</h2>
                             </div>
                         </>
                         : null}

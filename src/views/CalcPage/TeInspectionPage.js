@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Switch } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Switch } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const TeInspectionPage = () => {
@@ -26,6 +27,10 @@ const TeInspectionPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (!dzi) {
+            toast.warn('Լրացրեք շարժիչի հզորությունը')
+            return
+        }
         if (transport == (1 || 2 || 3)) {
             setBnapTax(dzi * arr1[dziIndex][taretiv]);
         }
@@ -34,7 +39,6 @@ const TeInspectionPage = () => {
 
     const handleChangeTransport = (e) => {
         const a = e.target.value
-        console.log(a);
         setTransport(a)
         switch (a) {
             case '1':
@@ -64,7 +68,6 @@ const TeInspectionPage = () => {
                 setBnapTax(0)
                 break;
         }
-
     }
 
     const handleChangeDzi = (e) => {
@@ -116,7 +119,7 @@ const TeInspectionPage = () => {
                     <div className="parent-select">
                         <div>
                             <label className="appa-label">Տրանսպորտային միջոցի տեսակ</label><br />
-                            <select className="appa-select" onChange={handleChangeTransport} >
+                            <select className="appa-select" value={transport} onChange={handleChangeTransport} >
                                 <option value='1'>Թեթև մարդատար </option>
                                 <option value='2'>Ավտոբուս (մինչև 17 նստատեղով) </option>
                                 <option value='3'>Ավտոբուս (17-ից ավել նստատեղով) </option>

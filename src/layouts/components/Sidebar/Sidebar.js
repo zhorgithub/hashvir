@@ -6,21 +6,21 @@ function Sidebar(props) {
     return (
         <ul className="list-unstyled components">
             <li>
-            <Link to='salary'>Աշխատավարձ</Link>
-            </li> 
-             <li>
-                <Link to='realEstate'>Գույքահարկ</Link>
-            </li> 
+                <Link to='salary'>Աշխատավարձ</Link>
+            </li>
             <li>
-                <Link to='cars'>Տրանսպորտային միջոցների գույքահարկ</Link>
+                <Link to='realEstate'>Գույքահարկ</Link>
+            </li>
+            <li>
+                <Link to='cars'>Փոխադրամիջոցների գույքահարկ</Link>
             </li>
 
             <li>
                 <Link to='appa'>Ապպա</Link>
             </li>
-             <li>
+            <li>
                 <Link to='inspection'>Տեխզննում</Link>
-            </li> 
+            </li>
             {/* <li className="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Վարկ</a>
                 <ul className="collapse list-unstyled" id="homeSubmenu">

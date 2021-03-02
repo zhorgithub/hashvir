@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CarsPage = () => {
 
@@ -10,14 +10,13 @@ const CarsPage = () => {
         e.preventDefault();
         let myTax;
         let percent = 100;
-
         const type = parseInt(e.target.elements[0].value);
         const hp = parseInt(e.target.elements[1].value);
         const year = parseInt(e.target.elements[2].value)
-
-
+        if (!hp) {
+            toast.warn('Լրացրեք շարժիչի հզորությունը')
+        }
         const age = new Date().getFullYear() - year + 1
-
         switch (true) {
             case (type == 1):
                 if (hp <= 120) {
@@ -65,7 +64,7 @@ const CarsPage = () => {
         <>
             <form onSubmit={handleSubmit}>
                 <div className="cars">
-                    <div className="top-text"><h3>Փոխադրամիջոցների Գույքահարկ</h3></div>
+                    <div className="top-text"><h3>Փոխադրամիջոցների գույքահարկ</h3></div>
                     <hr className="sep" />
                     <label className="cars-label">Տրանսպորտի տեսակը</label><br />
                     <select className="cars-select" value={carType} onChange={e => setCarType(e.target.value)}>
