@@ -412,6 +412,7 @@ body .carousel .slide .slider img{
 .salary-result{
     font-size: 20px;
     font-style: italic;
+    position: relative;
 }
 .salary-plus{
     position: absolute;
@@ -423,5 +424,14 @@ body .carousel .slide .slider img{
 .salary-result-parent{
     width: auto;
     max-width: 340px;
+    text-align: right;
+}
+.salary-result-num{
+    bottom: 25px;
+    position: relative;
+}
+.inspection-result-parent{
+    width: auto;
+    max-width: 505px;
     text-align: right;
 }

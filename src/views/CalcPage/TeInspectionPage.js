@@ -150,15 +150,15 @@ const TeInspectionPage = () => {
                     <button type="submit" className="btn calc-btn"  >Հաշվել</button>
                     {ready ?
                         <>
-                            <h4>Տեխնիկական զննության ծառայության վճար - {znnumFee}</h4>
-                            <h4>Բնապահպանության հարկ - {bnapTax}</h4>
-                            <h4>Տեխնիկական զննության կտրոն - {ktron}</h4>
-                            <h3>Ընդամենը - {znnumFee + bnapTax + ktron} </h3>
-                            {/* <h3> {startSalary ? 'Աշխատավարձ - ' + startSalary : ''}</h3>
-                            <h2> {ekamtayin ? 'Եկամտային հարկ - ' + ekamtayin : ''}</h2>
-                            <h2> {kutakayin ? 'Կուտակային կենս․ - ' + kutakayin : ''}</h2>
-                            <h2>Դրոշմանշային վճար 1000</h2>
-                            <h2> {finalSalary > 1000 ? 'Արդյունք - ' + finalSalary : ''}</h2> */}
+                         <div className="inspection-result-parent">
+                            <h2><span className="salary-result">Տեխնիկական զննության ծառայության վճար</span>{ znnumFee}</h2>
+                            <span className="salary-plus"> + </span>
+                            <h2><span className="salary-result">Բնապահպանության հարկ</span> {bnapTax}</h2>
+                            <span className="salary-plus"> + </span>
+                            <h2><span className="salary-result">Տեխնիկական զննության կտրոն</span> {ktron}</h2>
+                            <h2 className="salary-result-num">______________________</h2>
+                            <h2 className="salary-result-num">Ընդամենը {znnumFee + bnapTax + ktron} </h2>
+                        </div>
                         </>
                         : null}
                 </div>
