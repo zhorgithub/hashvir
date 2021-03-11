@@ -12,16 +12,19 @@ const SalaryPage = () => {
     const [ekamtayin, setEkamtayin] = useState()
     const [ekamtayinTokos, setEkamtayinTokos] = useState('22')
     const [droshmanish, setDroshmanish] = useState()
-    const [hashvarkType, setHashvarkType] = useState('0')
+    let [hashvarkType, setHashvarkType] = useState("0")
 
 
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        if (e) e.preventDefault()
         if (!startSalary) {
             toast.warn('Լրացրեք աշխատավարձի չափը')
             return
         }
+
+        // const hashvarkType = e.target.elements[0].value;
+        console.log(hashvarkType);
 
 
         let sal = parseInt(startSalary)
@@ -30,9 +33,6 @@ const SalaryPage = () => {
         let droshm
         let x
         if (hashvarkType == 0) {
-            console.log('hashvarktype', hashvarkType);
-            console.log('kutakayintokos', kutakayinTokos);
-            console.log('sal', sal);
             if (kutakayinTokos == 0) {
                 kutak = 0
                 switch (true) {
@@ -61,7 +61,6 @@ const SalaryPage = () => {
                     case (sal <= 73000):
                         droshm = 1500
                         x = Math.round((sal + droshm) * 100 / (100 - ekamtayinTokos - 3.5))
-                        console.log(x);
                         setEkamtayin(Math.round(x * ekamtayinTokos / 100))
                         setKutakayin(Math.round(x * 3.5 / 100))
                         setFinalSalary(Math.round(x))
@@ -70,7 +69,6 @@ const SalaryPage = () => {
                     case (sal > 73000 && sal <= 146000):
                         droshm = 3000
                         x = Math.round((sal + droshm) * 100 / (100 - ekamtayinTokos - 3.5))
-                        console.log(x);
                         setEkamtayin(Math.round(x * ekamtayinTokos / 100))
                         setKutakayin(Math.round(x * 3.5 / 100))
                         setFinalSalary(Math.round(x))
@@ -79,7 +77,6 @@ const SalaryPage = () => {
                     case (sal > 146000 && sal <= 367000):
                         droshm = 5500
                         x = Math.round((sal + droshm) * 100 / (100 - ekamtayinTokos - 3.5))
-                        console.log(x);
                         setEkamtayin(Math.round(x * ekamtayinTokos / 100))
                         setKutakayin(Math.round(x * 3.5 / 100))
                         setFinalSalary(Math.round(x))
@@ -137,7 +134,6 @@ const SalaryPage = () => {
                     if (kutakayinTokos) {
                         kutak = (sal * kutakayinTokos / 100) - 32500
                     }
-
                     break;
                 case (sal > 1000000 && sal <= 1020000):
                     droshm = 15000
@@ -167,16 +163,15 @@ const SalaryPage = () => {
         setReady(false)
     }
     const twoCalls = e => {
-        setHashvarkType(e.target.value);
-        if (finalSalary > 0) {
-            // handleSubmit(e);
-        }
+        hashvarkType = e.target.value;
+        setHashvarkType(e.target.value)
+        handleSubmit()
 
     }
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <div className="salary">
                     <div className="top-text"><h3>Աշխատավարձի Հաշվիչ</h3></div>
                     <hr className="sep" />
@@ -210,7 +205,7 @@ const SalaryPage = () => {
                         <option value="10">Այո</option>
                     </select>
                     <br /><br />
-                    <button type="submit" className="btn calc-btn"  >Հաշվել</button>
+                    <button type="submit" className="btn calc-btn" >Հաշվել</button>
                     {ready ?
                         <>
                             <div className="salary-result-parent">

@@ -1,0 +1,56 @@
+#dataTable .application-item {
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 10px;
+    box-shadow: 0 0 6px #000;
+    position: relative;
+}
+
+#dataTable .application-item .info-req-bckgrd * {
+    font-size: 14px;
+}
+
+#dataTable .application-item .info-req-bckgrd:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+#dataTable .application-item .info-req-bckgrd {
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#dataTable .application-item .info-req-bckgrd * {
+    font-size: 14px;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+#dataTable .application-item .info-req-bckgrd:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#dataTable {
+    font-family: "GHEAMariam", Sylfaen, sans-serif;
+}
